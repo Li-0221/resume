@@ -1,0 +1,11 @@
+/*
+!/.gitignore
+!/README.md
+!/index.html
+!/deploy.sh
+!/nginx/
+/nginx/*
+!/nginx/resume.conf
+!/nginx/resume-bootstrap.conf
+!/李立-简历-v5.docx
+!/李立-简历-v5.pdf

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="李立的网页简历：高级前端工程师，具备 React、Vue、Next.js、Nuxt、FastAPI 和前端工程化经验。">
+  <link rel="icon" href="data:,">
+  <link rel="canonical" href="https://resume.inwe-ai.com/">
+  <title>李立 | 高级前端工程师</title>
+  <style>
+    :root { color-scheme: light; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #fcfdfb; color: #233b35; font-family: "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif; }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid #267b68; outline-offset: 4px; }
+    .container { width: min(100% - 64px, 1120px); margin-inline: auto; }
+    .site-nav { border-bottom: 1px solid #e1e9e3; background: #f5f8f4; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: #204b40; font-size: 14px; font-weight: 700; text-decoration: none; }
+    .brand-mark { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid #7eab99; color: #256f59; font: 700 13px/1 Georgia, serif; }
+    .brand-separator { color: #9bad9e; }
+    .docs-link { color: #416357; font-size: 13px; text-decoration: none; }
+    .docs-link:hover, .site-footer a:hover { color: #17735c; text-decoration: underline; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1fr) 270px; gap: 64px; padding-block: 56px 52px; border-bottom: 1px solid #cbd6d1; }
+    .eyebrow, .contact-label { color: #44796d; font: 700 12px/1.4 ui-sans-serif, system-ui, sans-serif; }
+    h1 { margin: 13px 0 12px; color: #142d2d; font: 700 64px/1.16 "Songti SC", "Noto Serif CJK SC", serif; }
+    .role { margin: 0; color: #214c47; font-size: 20px; font-weight: 650; line-height: 1.6; }
+    .profile-meta { margin: 9px 0 0; color: #60756c; font-size: 13px; line-height: 1.7; }
+    .summary { max-width: 770px; margin: 26px 0 0; color: #455956; font-size: 15px; line-height: 1.95; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 17px; border-radius: 5px; font-size: 14px; font-weight: 650; text-decoration: none; transition: background-color .18s, border-color .18s, transform .18s; }
+    .actions a:hover { transform: translateY(-2px); }
+    .primary-action { background: #1c6256; color: #fff; }
+    .primary-action:hover { background: #124c43; }
+    .secondary-action { border: 1px solid #a5bdb3; color: #224940; }
+    .secondary-action:hover { border-color: #1c6256; background: #edf5f1; }
+    .contact { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; align-self: end; padding: 20px 0 4px 23px; border-left: 2px solid #c6d7cf; }
+    .contact-label { margin-bottom: 2px; }
+    .contact a { color: #324d49; font-size: 14px; text-decoration: none; overflow-wrap: anywhere; }
+    .contact a:hover { color: #147561; text-decoration: underline; }
+    .content { display: grid; grid-template-columns: minmax(250px, 300px) minmax(0, 1fr); gap: clamp(48px, 7vw, 105px); padding-block: 56px 92px; }
+    .sidebar { display: flex; grid-column: 1; grid-row: 1; flex-direction: column; gap: 54px; }
+    .experience { grid-column: 2; grid-row: 1; }
+    .section-heading { display: flex; align-items: center; gap: 13px; margin-bottom: 28px; }
+    .section-heading span { color: #ae6d55; font-size: 13px; font-weight: 700; }
+    h2 { margin: 0; color: #173a36; font-size: 23px; line-height: 1.35; }
+    .skill-groups { display: grid; gap: 26px; }
+    .skill-group h3 { margin: 0 0 11px; color: #42675f; font-size: 13px; font-weight: 700; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 7px; }
+    .skill-list span { display: inline-flex; align-items: center; min-height: 27px; padding: 3px 8px; border: 1px solid #d7e3dc; border-radius: 4px; background: #f5f8f5; color: #435e57; font-size: 12px; line-height: 1.35; }
+    .education { padding-top: 28px; border-top: 1px solid #d6e2d9; }
+    .education h3 { margin: 0 0 5px; color: #25483d; font-size: 16px; }
+    .education p { margin: 0 0 6px; color: #576d62; font-size: 13px; }
+    .education-period { color: #788b80; font-size: 12px; }
+    .timeline { margin-left: 6px; border-left: 1px solid #c8d9d0; }
+    .job { position: relative; padding: 0 0 38px 27px; }
+    .job:last-child { padding-bottom: 0; }
+    .job::before { position: absolute; top: 8px; left: -5px; width: 9px; height: 9px; border: 2px solid #2a806a; border-radius: 50%; background: #fff; content: ""; }
+    .job-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 20px; }
+    .job h3 { margin: 0; color: #203e37; font-size: 20px; line-height: 1.4; }
+    .job-role { margin: 3px 0 0; color: #677b73; font-size: 13px; }
+    .period { flex: none; color: #6d8179; font-size: 12px; white-space: nowrap; }
+    .job-section + .job-section { margin-top: 22px; }
+    .job h4 { margin: 0 0 9px; color: #297560; font-size: 14px; font-weight: 700; line-height: 1.5; }
+    .job ul { display: grid; gap: 8px; margin: 0; padding-left: 19px; }
+    .job li { padding-left: 1px; color: #40554d; font-size: 14px; line-height: 1.82; }
+    .job li::marker { color: #9fb9a9; }
+    .site-footer { display: flex; justify-content: space-between; gap: 20px; padding-block: 22px 34px; border-top: 1px solid #dbe6de; color: #819288; font-size: 12px; }
+    .site-footer a { color: #416357; text-decoration: none; }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 36px, 1120px); }
+      .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 44px 42px; }
+      h1 { font-size: 48px; }
+      .role { font-size: 18px; }
+      .summary { margin-top: 20px; }
+      .contact { gap: 13px; align-self: auto; padding: 0 0 0 16px; }
+      .content { grid-template-columns: 1fr; gap: 48px; padding-block: 42px 70px; }
+      .sidebar { grid-column: 1; grid-row: 2; gap: 38px; }
+      .experience { grid-column: 1; grid-row: 1; }
+      .education { padding-top: 25px; }
+    }
+    @media (max-width: 600px) {
+      .job-heading { flex-direction: column; align-items: flex-start; gap: 3px; }
+      .job { padding-left: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .actions a { transition: none; }
+    }
+    @media print {
+      .site-nav, .site-footer, .actions { display: none; }
+      body { background: #fff; }
+      .content { gap: 32px; }
+      .job { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="回到简历顶部"><span class="brand-mark">LL</span><span>李立<span class="brand-separator"> / </span>简历</span></a>
+      <a class="docs-link" href="https://li-0221.github.io/doc/">技术文档 ↗</a>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero" aria-labelledby="resume-name">
+      <div>
+        <p class="eyebrow">RESUME / 李立</p>
+        <h1 id="resume-name">李立</h1>
+        <p class="role">高级前端工程师 / 全栈交付与前端工程化</p>
+        <p class="profile-meta">5 年+ · 软件工程本科 · 意向岗位：高级前端工程师 / 全栈工程师</p>
+        <p class="summary">5 年以上 Web 研发经历，主要使用 React/Next.js、Vue/Nuxt 和 TypeScript 开发交易与运营系统，并直接承担 FastAPI、NestJS 服务端开发。在 TripGuru 主要负责 Supplier、OTA、Bytecompute 三条业务的前端交付，承担约 5 人跨业务前端团队的任务分配、方案与代码评审；2026 年多数研发任务使用 Codex 和 Antigravity 完成，由本人负责方案判断、代码审查与验收。</p>
+        <div class="actions">
+          <a class="primary-action" href="./李立-简历-v5.pdf" download>下载 PDF 简历</a>
+          <a class="secondary-action" href="mailto:miciili-02@outlook.com">邮件联系</a>
+        </div>
+      </div>
+      <div class="contact" aria-label="联系方式">
+        <span class="contact-label">CONTACT</span>
+        <a href="tel:15827057426">15827057426</a>
+        <a href="mailto:miciili-02@outlook.com">miciili-02@outlook.com</a>
+        <a href="https://tripguru.ai/" target="_blank" rel="noopener noreferrer">tripguru.ai ↗</a>
+      </div>
+    </section>
+
+    <div class="content">
+      <section class="experience" aria-labelledby="experience-heading">
+        <div class="section-heading"><span>01</span><h2 id="experience-heading">工作经历</h2></div>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-heading"><div><h3>TripGuru</h3><p class="job-role">前端工程师</p></div><span class="period">2025.07 - 2026.10</span></div>
+            <div class="job-section">
+              <h4>Supplier 平台 | 主要前端开发</h4>
+              <ul>
+                <li>主要负责 React 运营后台与 Next.js Booking 前端，贯通产品/票型、排期库存、代理商 Marketplace、订单和消费者结账；保障零占座票型（不占库存配额但可正常售卖）、接送详情及所选日期起价的跨端一致性。</li>
+                <li>直接开发 FastAPI 业务接口与数据规则，包括协议范围商品目录、Session 原子批量更新和公开预订促销码；针对预订字段重名，在管理端提前校验并定位错误，服务端按公司范围进行去空格、大小写无关校验，并以事务锁保护并发写入，补充 OpenAPI 契约与集成测试。</li>
+                <li>落地支持地图选点与站点排序的接送路线编辑器、运营表格列偏好；针对排期日历拖拽重绘，借助 React Profiler 定位瓶颈，将指针移动状态解耦至 <code>requestAnimationFrame</code> 调度，并编写自动化回归测试约束无效重渲染。</li>
+              </ul>
+            </div>
+            <div class="job-section">
+              <h4>OTA 平台 | 主要前端开发</h4>
+              <ul>
+                <li>主要负责 OTA Booking 与 OTA Admin 前端，完成酒店、Tour、Activity 的搜索详情、日历价格、动态旅客表单、购物车、优惠码、结账及订单确认，并覆盖库存冲突、支付失败等异常路径。</li>
+                <li>针对多接口同时触发 Token 过期的场景，复用同一个刷新 Promise 合并并发请求，刷新后重试原请求，避免重复刷新；调整 Booking 首页 SSR 请求时机与非关键模块懒加载，减少首屏资源占用；完善多角色权限路由与 Sentry 监控。</li>
+                <li>参与 OTA 运营后台从分散子系统向统一工作台演进，开发商品与酒店配置、订单处理和代理商操作流程。</li>
+              </ul>
+            </div>
+            <div class="job-section">
+              <h4>Bytecompute | 主要前端开发</h4>
+              <ul>
+                <li>入职首年主要负责 Bytecompute Website 与 Admin 的从零建设，同期承担 Booking 预订系统重构，协同 UI、后端团队统一设计规范、接口契约与代码规范。</li>
+                <li>推进 TypeScript 使用规范、Git 协作流程和 Docker/CI/CD 配置，让网站、管理后台与预订项目采用一致的开发和发布流程。</li>
+              </ul>
+            </div>
+            <div class="job-section">
+              <h4>跨业务前端团队与工程化</h4>
+              <ul>
+                <li>在约 5 人、分属不同业务线的前端团队中负责任务分配、技术方案和代码评审；Supplier、OTA、Bytecompute 的主要前端开发由本人承担。</li>
+                <li>担任 TripGuru 官网（<a href="https://tripguru.ai/" target="_blank" rel="noopener noreferrer">tripguru.ai</a>）及关联产品的前端主要负责人，负责相关前端开发与交付。</li>
+                <li>建设 Nuxt Starter 脚手架与共享 npm 包，沉淀页面骨架、认证、表格搜索、图片上传及结账字段规范化工具（含多语言姓名测试）；维护公共前端 CI，支持私有包认证并提供可选的 4 分片浏览器测试；启用后，发布提升需等待全部分片通过。</li>
+                <li>参与 Supplier 多环境 GitOps 配置，从构建镜像提取不可变静态资源提前上传，配合 Nginx 远端回源降低版本交错时的资源加载风险；以 Codex、Antigravity 完成多数开发任务，负责方案判断、代码审查、测试和运行验收。</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job-heading"><div><h3>善思开悟</h3><p class="job-role">前端与全栈开发</p></div><span class="period">2025.03 - 2025.05</span></div>
+            <div class="job-section"><ul>
+              <li>开发 AI 聊天平台的 Vue 3 前端与 FastAPI 服务端，对接大语言模型流式 API，以 SSE（Server-Sent Events）实现流式打字消息输出并适配多端响应式。</li>
+              <li>处理 Markdown、代码高亮、数学公式（LaTeX）与 Mermaid 流程图的流式渐进渲染；编写前后端 Dockerfile 与 Compose 部署配置，参与模型微调管理后台开发。</li>
+            </ul></div>
+          </article>
+
+          <article class="job">
+            <div class="job-heading"><div><h3>越栈科技</h3><p class="job-role">前端与全栈开发</p></div><span class="period">2023.04 - 2024.12</span></div>
+            <div class="job-section"><ul>
+              <li>参与聊天记录分析平台，完成大文件分片上传与断点续传、WebSocket 状态推送、聊天记录内容切割打印与大量本地数据缓存。</li>
+              <li>在远控平台集成 xterm Web 终端与 CodeMirror 在线编辑，封装稳定可靠的 WebSocket 连接、心跳探测与重连逻辑。</li>
+              <li>搭建 NestJS 项目模板，整合 JWT/RBAC 权限体系、参数校验、文件处理和 Swagger 文档；在案件信息采集系统中开发 Vue 3 页面及 NestJS/Prisma 接口。</li>
+              <li>开发 Nuxt/Nest 内容站点，处理 SSR 与 SEO 优化、内容管理、短信验证、会员权限及支付流程。</li>
+            </ul></div>
+          </article>
+
+          <article class="job">
+            <div class="job-heading"><div><h3>数喆数据</h3><p class="job-role">前端开发</p></div><span class="period">2021.02 - 2023.03</span></div>
+            <div class="job-section"><ul>
+              <li>参与全国第三次土壤普查项目，使用 OpenLayers 实现样点展示、矢量图形编辑、点位操作与路径规划。</li>
+              <li>为样点数据包实现分片上传和断点续传，并用 ECharts 展示地理数据与统计结果。</li>
+              <li>开发内部人事、培训与官网移动端，搭建 Vite/Vue 3 前端模板，推动 ESLint、Prettier 与 GitLab 协作规范。</li>
+            </ul></div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section aria-labelledby="skills-heading">
+          <div class="section-heading"><span>02</span><h2 id="skills-heading">技术能力</h2></div>
+          <div class="skill-groups">
+            <div class="skill-group"><h3>前端</h3><div class="skill-list"><span>TypeScript</span><span>React / Next.js</span><span>Vue 3 / Nuxt</span><span>Vite / SSR</span><span>TanStack Router / Query / Table</span><span>Pinia</span><span>复杂表单与多角色权限路由</span><span>响应式与 GIS 地图交互</span></div></div>
+            <div class="skill-group"><h3>服务端与数据</h3><div class="skill-list"><span>Python / FastAPI</span><span>Pydantic</span><span>SQLAlchemy / Alembic</span><span>PostgreSQL</span><span>NestJS / Prisma</span><span>MySQL</span><span>业务 API 与数据校验</span><span>并发事务锁、鉴权与集成测试</span></div></div>
+            <div class="skill-group"><h3>工程化与质量</h3><div class="skill-list"><span>pnpm Monorepo</span><span>共享 npm 包</span><span>GitLab CI</span><span>Docker</span><span>GitOps / Helm</span><span>Nginx</span><span>Vitest / Playwright</span><span>React Profiler</span><span>requestAnimationFrame</span><span>Sentry</span></div></div>
+            <div class="skill-group"><h3>AI Agent 研发</h3><div class="skill-list"><span>Codex</span><span>Antigravity</span><span>跨仓检索与需求拆解</span><span>严格代码审查</span><span>类型检查</span><span>自动化测试与运行验证</span></div></div>
+          </div>
+        </section>
+        <section class="education" aria-labelledby="education-heading">
+          <div class="section-heading"><span>03</span><h2 id="education-heading">教育经历</h2></div>
+          <h3>武汉商学院</h3>
+          <p>软件工程 · 本科</p>
+          <span class="education-period">2017.09 - 2021.06</span>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="container site-footer"><span>李立 · 网页简历</span><a href="https://li-0221.github.io/doc/">技术文档 ↗</a></footer>
+</body>
+</html>
