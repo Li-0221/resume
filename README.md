@@ -2,7 +2,7 @@
 
 - [网页简历](https://resume.inwe-ai.com/)
 - [技术文档](https://li-0221.github.io/doc/)
-- [v6 PDF](李立-简历-v6.pdf) / [DOCX](李立-简历-v6.docx)
+- [v8 PDF](李立-简历-v8.pdf) / [DOCX](李立-简历-v8.docx)
 
 ## 更新网页
 
