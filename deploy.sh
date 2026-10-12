@@ -2,7 +2,7 @@
 set -euo pipefail
 
 resume_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-pdf_name='李立-简历-v8.pdf'
+pdf_name='李立-简历-v10.pdf'
 remote_host='server-134'
 remote_dir='/var/www/resume.inwe-ai.com'
 
